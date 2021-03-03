@@ -24,5 +24,6 @@ func printNumber(x interface{}) {
 
 func main() {
     var x uint = 12
-    printNumber(x)
+    printNumber(x) // outputs 12
+    printNumber("Hello World") // outputs "x is not a number"
 }
