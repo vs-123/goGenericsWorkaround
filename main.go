@@ -15,9 +15,10 @@ func contains(x []string, y string) bool {
 
 func printNumber(x interface{}) {
     // Get the type of x and check whether if it's in the string slice that contains all supported types for this function
-    if contains([]string{"int", "float64", "uint"}, fmt.Sprintf("%T", x)) {
+    switch x.(type) {
+    case int, float64, uint:
         fmt.Println(x)
-    } else {
+    default:
         fmt.Println("x is not a number")
     }
 }
