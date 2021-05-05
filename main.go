@@ -13,12 +13,11 @@ func contains(x []string, y string) bool {
     return false
 }
 
-func printNumber(x interface{}) {
-    // Get the type of x and check whether if it's in the string slice that contains all supported types for this function
-    switch x.(type) {
-    case int, float64, uint:
+func printNumber(x interface{}) {    
+    switch x.(type) { // Get the type of x and check whether if it belongs to the supported types
+    case int, float64, uint: // If true, print the number
         fmt.Println(x)
-    default:
+    default: // If false, print "x is not a number"
         fmt.Println("x is not a number")
     }
 }
